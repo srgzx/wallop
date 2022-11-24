@@ -77,7 +77,7 @@ module Wallop
               Wallop.logger.info "Tuning channel #{channel} with quality settings of #{resolution} @ #{bitrate} with deinterlace filter off"
               pid  = POSIX::Spawn::spawn(Wallop.ffmpeg_no_deint_command(channel, resolution, bitrate))
           else
-              Wallop.logger.info "Tuning channel #{channel} with quality settings of #{resolution} @ #{bitrate} with #{dset}"
+              Wallop.logger.info "Tuning channel #{channel} with quality settings of #{resolution} @ #{bitrate} with deinterlace filter on"
               pid  = POSIX::Spawn::spawn(Wallop.ffmpeg_command(channel, resolution, bitrate))
       
           end
