@@ -71,7 +71,7 @@ module Wallop
           ## validate resolution and bitrate
           resolution = params[:resolution] =~ /\A\d+x\d+\z/ ? params[:resolution] : '1280x720'
           bitrate = params[:bitrate] =~ /\A\d+k\z/ ? params[:bitrate] : '3000k'
-          deint = params[:deint] =~ /\A\d+k\z/ ? params[:deint] : '1'
+          deint = params[:deint] =~ /\A\d+k\z/ ? params[:deint] : '0'
           
           if deint == 0
               Wallop.logger.info "Tuning channel #{channel} with quality settings of #{resolution} @ #{bitrate} with deinterlace filter off"
