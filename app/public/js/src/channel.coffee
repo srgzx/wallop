@@ -18,6 +18,9 @@ $ ->
 
   resolution = ->
     localStorage.resolution || "1280x720"
+    
+  deint = ->
+    localStorage.deint || "0"
 
   profile = ->
     localStorage.profile || "mobile"
