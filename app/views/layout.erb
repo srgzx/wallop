@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wallop</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="viewport" content="width=320.1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/img/Icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/Icon@2x.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/Icon-72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/Icon-72@2x.png">
+
+
+    <link href='/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='/css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
+    <link href='/css/styles.css' rel='stylesheet' type='text/css'>
+    <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/jquery-ui-1.9.1.min.js"></script>
+    <script src="/js/plugins/spin.min.js"></script>
+    <script src="/js/plugins/jquery.spin.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/hls.min.js"></script>
+
+    <script type="text/coffeescript" src="/js/src/channel.coffee"></script>
+    <script type="text/coffeescript" src="/js/src/favorites.coffee"></script>
+    <script type="text/coffeescript" src="/js/src/settings.coffee"></script>
+    <script src="/js/coffee-script.js"> </script>
+
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">
+            Wallop
+          </a>
+          <ul class="nav">
+            <li class="<%= 'active' if params[:type] == 'favorites' %>"><a href="/channels?type=favorites">Favorites</a></li>
+            <li class="<%= 'active' if params[:type] == 'hd' %>"><a href="/channels?type=hd">HD</a></li>
+            <li class="<%= 'active' if params[:type] == nil %>"><a href="/channels">All</a></li>
+            <li class=""><a href="#settings" data-toggle="modal">Settings</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+
+    <div id="settings" class="modal hide fade">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>Settings</h3>
+        <p>Adjust the quality of the stream.</p>
+      </div>
+      <div class="modal-body">
+
+      <% if Wallop.config['hdhr_transcode'] %>
+          <h4>Transcode Profile</h4>
+          <label class="radio">
+            <input class="profile-setting" name="profile" type="radio" value="heavy">
+            Original resolution and frame rate
+          </label>
+          <label class="radio">
+            <input class="profile-setting" name="profile" type="radio" value="mobile">
+            1280x720 30fps
+          </label>
+          <label class="radio">
+            <input class="profile-setting" name="profile" type="radio" value="internet540">
+            960x540 30fps low bitrate
+          </label>
+          <label class="radio">
+            <input class="profile-setting" name="profile" type="radio" value="internet480">
+            848x480 30fps low bitrate
+          </label>
+          <label class="radio">
+            <input class="profile-setting" name="profile" type="radio" value="internet360">
+            640x360 30fps low bitrate
+          </label>
+          <label class="radio">
+            <input class="profile-setting" name="profile" type="radio" value="internet240">
+            432x240 30fps low bitrate
+          </label>
+      <% else %>
+          <h4>Resolution</h4>
+          <label class="radio">
+            <input class="resolution-setting" name="resolution" type="radio" value="640x360">
+            640x360
+          </label>
+          <label class="radio">
+            <input class="resolution-setting" name="resolution" type="radio" value="640x480">
+            640x480
+          </label>
+          <label class="radio">
+            <input class="resolution-setting" name="resolution" type="radio" value="720x480">
+            720x480
+          </label>
+          <label class="radio">
+            <input class="resolution-setting" name="resolution" type="radio" value="1280x720">
+            1280x720
+          </label>
+          <label class="radio">
+            <input class="resolution-setting" name="resolution" type="radio" value="1920x1080">
+            1920x1080
+          </label>
+
+          <h4>Bitrate</h4>
+          <label class="radio">
+            <input class="bitrate-setting" name="bitrate" type="radio" value="320k">
+            320kbps
+          </label>
+          <label class="radio">
+            <input class="bitrate-setting" name="bitrate" type="radio" value="720k">
+            720kbps
+          </label>
+          <label class="radio">
+            <input class="bitrate-setting" name="bitrate" type="radio" value="1000k">
+            1mbps
+          </label>
+          <label class="radio">
+            <input class="bitrate-setting" name="bitrate" type="radio" value="2000k">
+            2mbps
+          </label>
+          <label class="radio">
+            <input class="bitrate-setting" name="bitrate" type="radio" value="3000k">
+            3mbps
+          </label>
+          <label class="radio">
+            <input class="bitrate-setting" name="bitrate" type="radio" value="4000k">
+            4mbps
+          </label>
+          <label class="radio">
+            <input class="bitrate-setting" name="bitrate" type="radio" value="6000k">
+            6mbps
+          </label>
+          <label class="radio">
+            <input class="bitrate-setting" name="bitrate" type="radio" value="8000k">
+            8mbps
+          </label>
+          
+          <h4>Deinterlace Filter</h4>
+          <label class="radio">
+            <input class="deint-setting" name="deint" type="radio" value="1">
+            On
+          </label>
+          <label class="radio">
+            <input class="deint-setting" name="deint" type="radio" value="0">
+            Off
+          </label>
+          
+      <% end %>
+
+      </div>
+      <div class="modal-footer">
+        <a href="#" data-dismiss="modal" class="btn btn-primary">OK</a>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec env RACK_ENV=production script/server

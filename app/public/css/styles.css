@@ -1,0 +1,40 @@
+body{
+  padding-top: 60px;
+}
+
+.modal-body {
+    max-height: calc(100vh - 143px);
+    overflow-y: auto; }
+
+.spinner{
+  margin-bottom: 60px;
+}
+
+video{
+  width: 640px;
+  height: 360px;
+}
+
+a.favorite{
+  text-decoration: none;
+}
+
+@media screen and (max-width: 980px) {
+  body { padding-top: 0px; }
+}
+
+@media screen and (max-width: 568px){
+  video{
+    width: 528px;
+    height: 297px;
+  }
+}
+
+
+@media screen and (max-width: 320px){
+  video{
+    width: 280px;
+    height: 157px;
+  }
+}
+
