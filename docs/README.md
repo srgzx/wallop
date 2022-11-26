@@ -3,13 +3,17 @@
 This original project has been abandoned and the creators have moved on to Channels, so I have taken it upon myself to update this code and make it more useful for my own purposes
 
 1.) Added option for turning on or off ffmpeg deinterlace filter (-vf bwdif) 
+
 2.) Updated Dockerfile so that it actually builds / works (works on ARM systems!)
+
 3.) Added other bitrate options
 
 Works in progress:
 
 1.) Add username / password login
+
 2.) Fix the way Wallop sessions work
+
 3.) Add detector for when all tuners are tied up, Wallop currently will endless loop when this happens (not good lol)
 
 # Wallop API
