@@ -1,6 +1,8 @@
 11/26/2022
 
-This original project has been abandoned and the creators have moved on to Channels, so I have taken it upon myself to update this code and make it more useful for my own purposes
+This original project has been abandoned and the creators have moved on to Channels (www.getchannels.com), so I have taken it upon myself to update this code and make it more useful for my own purposes and to learn more about web development
+
+To be clear I am a sysadmin not a dev, and I know next to nothing about Ruby -- but this is definitely a great way to learn!
 
 1.) Added option for turning on or off ffmpeg deinterlace filter (-vf bwdif) 
 
