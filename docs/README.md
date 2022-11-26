@@ -1,6 +1,6 @@
 11/26/2022
 
-This original project has been abandoned and the creators have moved on to Channels (www.getchannels.com), so I have taken it upon myself to update this code and make it more useful for my own purposes and to learn more about web development
+The original project (https://github.com/maddox/wallop) has been abandoned and the creators have moved on to Channels (www.getchannels.com), so I have taken it upon myself to re-upload the code, and update it to make it more useful for my own purposes and to learn more about web development
 
 To be clear I am a sysadmin not a dev, and I know next to nothing about Ruby -- but this is definitely a great way to learn!
 
@@ -17,6 +17,8 @@ Works in progress:
 2.) Fix the way Wallop sessions work
 
 3.) Add detector for when all tuners are tied up, Wallop currently will endless loop when this happens (not good lol)
+
+Continue on with the original readme:
 
 # Wallop API
 
