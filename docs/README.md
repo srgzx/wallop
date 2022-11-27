@@ -101,6 +101,7 @@ This method will tell Wallop to prepare a channel for streaming. It will tune yo
 
 * **resolution**: (OPTIONAL) The resolution you want to transcode to. You'll want this to be an aspect of 16x9. This defaults to `1280x720`.
 * **bitrate**: (OPTIONAL) The bitrate you want to transcode to. Format `2000k`. This defaults to `3000k`.
+* **deint**: (OPTIONAL) Turns on or off ffmpeg's bwdif deinterlace filter.  Format `1` or `0`.  Defaults to `0` (off).
 
 ### `GET` /channels/:channel/status
 
