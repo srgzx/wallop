@@ -73,9 +73,13 @@ module Wallop
           bitrate = params[:bitrate] =~ /\A\d+k\z/ ? params[:bitrate] : '3000k'
           deint = params[:deint] =~ /\A\d\z/ ? params[:deint] : '0'
 
+          ## added logging to track settings, as I suck at javascript and initially didn't code this right
+          
           Wallop.logger.info "Deint value is #{deint}"
           Wallop.logger.info "Bitrate value is #{bitrate}"
           Wallop.logger.info "Resolution value is #{resolution}"
+          
+          ## this uses a different command based on the deinterlace setting, there's probably a much more efficient way to write this code in Ruby
 
           if params[:deint]  == '0'
               Wallop.logger.info "Tuning channel #{channel} with quality settings of #{resolution} @ #{bitrate} with deinterlace filter off"
