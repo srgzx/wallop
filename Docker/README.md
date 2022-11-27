@@ -1,6 +1,6 @@
-To run build and run this Docker container:
+To build and run this Docker container:
 
-1.) Install Docker on your machine
+1.) Install Docker
 
 2.) Download the Dockerfile & config.toml from this folder
 
