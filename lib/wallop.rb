@@ -25,15 +25,21 @@ module Wallop
     @config ||= TOML.load_file(File.join(RACK_ROOT, 'config', 'config.toml'))
   end
 
+  # I changed this, so now the default ffmpeg_command will have deinterlace filter turned on, there's probably a better way to do this, but this works
+  
   def self.ffmpeg_command(channel, resolution='1280x720', bitrate='3000k')
     audio_options = config['ffmpeg']['acodec'] == 'copy' ? '-acodec copy' : "-ac #{config['ffmpeg']['ac']} -acodec #{config['ffmpeg']['acodec']}"
     %{exec #{config['ffmpeg_path']} -threads #{config['ffmpeg']['threads']} -f mpegts -analyzeduration 2000000 -i #{raw_stream_url_for_channel(channel)} #{audio_options} -b:v #{bitrate} -bufsize #{bitrate.to_i*2}k -minrate #{bitrate.gsub(/\d+/){ |o| (o.to_i * 0.80).to_i }} -maxrate #{bitrate} -vcodec #{config['ffmpeg']['vcodec']} -s #{resolution} -preset #{config['ffmpeg']['h264_preset']} -r #{config['ffmpeg']['framerate']} -hls_time #{config['ffmpeg']['hls_time']} -hls_wrap #{config['ffmpeg']['hls_wrap']} #{config['ffmpeg']['options']} -vf bwdif #{transcoding_path}/#{channel}.m3u8 >log/ffmpeg.log 2>&1}
   end
   
+  # Also added this, the ffmpeg_no_deint_command will have deinterlace filter turned off
+  
   def self.ffmpeg_no_deint_command(channel, resolution='1280x720', bitrate='3000k')
     audio_options = config['ffmpeg']['acodec'] == 'copy' ? '-acodec copy' : "-ac #{config['ffmpeg']['ac']} -acodec #{config['ffmpeg']['acodec']}"
     %{exec #{config['ffmpeg_path']} -threads #{config['ffmpeg']['threads']} -f mpegts -analyzeduration 2000000 -i #{raw_stream_url_for_channel(channel)} #{audio_options} -b:v #{bitrate} -bufsize #{bitrate.to_i*2}k -minrate #{bitrate.gsub(/\d+/){ |o| (o.to_i * 0.80).to_i }} -maxrate #{bitrate} -vcodec #{config['ffmpeg']['vcodec']} -s #{resolution} -preset #{config['ffmpeg']['h264_preset']} -r #{config['ffmpeg']['framerate']} -hls_time #{config['ffmpeg']['hls_time']} -hls_wrap #{config['ffmpeg']['hls_wrap']} #{config['ffmpeg']['options']} #{transcoding_path}/#{channel}.m3u8 >log/ffmpeg.log 2>&1}
   end
+  
+  # This was from the original, I didn't see a point to adding the deinterlace filter option for the no_transcode command, as I personally don't ever use this command
 
   def self.ffmpeg_no_transcode_command(channel, profile='mobile')
     audio_options = config['ffmpeg']['acodec'] == 'copy' ? '-acodec copy' : "-ac #{config['ffmpeg']['ac']} -acodec #{config['ffmpeg']['acodec']}"
