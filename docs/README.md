@@ -20,7 +20,7 @@ To do at some point:
 
 1.) Add username / password login
 
-2.) Fix the way Wallop sessions work, because right now they kinda suck...if the streaming settings are changed, and the browser back button is used, you have to wait ~1 minute or so until it kills the previous session
+2.) Fix the way Wallop sessions work, because right now they kinda suck...if the streaming settings are changed, and the browser back button is used, you have to wait 60 seconds until it kills the previous session in order to load another stream...hopefully there's a better way to do this?
 
 3.) Add detector for when all tuners are tied up, Wallop currently will endless loop when this happens (not good lol)!
 
