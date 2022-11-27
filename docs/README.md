@@ -8,7 +8,7 @@ To be clear: I am a sysadmin and not a dev, and I know next to nothing about Rub
 
 I did not fork the original repo because I don't really know what I am doing here on Github or with editing this code, and I did not want to accidentally bombard the original project folks with notifications & commits etc.
 
-<b>It's very important to understand that THIS version of wallop is NOT designed to be installed, it's meant to be run from a Docker container ONLY</b>
+<b>It's very important to understand that THIS version of wallop is NOT designed to be installed and run on macOS/Windows/Linux, it's meant to be run specifically from a Docker container</b>
 
 So far I have changed:
 
