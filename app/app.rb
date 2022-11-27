@@ -68,7 +68,7 @@ module Wallop
           Wallop.logger.info "Tuning channel #{channel} with transcode profile #{profile}"
           pid  = POSIX::Spawn::spawn(Wallop.ffmpeg_no_transcode_command(channel, profile))
         else
-          ## validate resolution and bitrate
+          ## validate resolution and bitrate and deint parameters
           resolution = params[:resolution] =~ /\A\d+x\d+\z/ ? params[:resolution] : '1280x720'
           bitrate = params[:bitrate] =~ /\A\d+k\z/ ? params[:bitrate] : '3000k'
           deint = params[:deint] =~ /\A\d\z/ ? params[:deint] : '0'
