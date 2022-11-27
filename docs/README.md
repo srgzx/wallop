@@ -8,6 +8,8 @@ To be clear: I am a sysadmin and not a dev, and I know next to nothing about Rub
 
 I did not fork the original repo because I don't really know what I am doing here on Github or with editing this code, and I did not want to accidentally bombard the original project folks with notifications & commits etc.
 
+<b>It's very important to understand that THIS version of wallop is NOT designed to be installed, it's meant to be run from a Docker container ONLY</b>
+
 So far I have changed:
 
 1.) Added option for turning on or off ffmpeg deinterlace filter (-vf bwdif) which is the main thing I wanted to accomplish with this project
