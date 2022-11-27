@@ -8,7 +8,7 @@ $ ->
     $('#video-player').data('status-url')
 
   tuneUrl = ->
-    $('#video-player').data('tune-url') + "?resolution=" + resolution() + "&bitrate=" + bitrate() + "&profile=" + profile() 
+    $('#video-player').data('tune-url') + "?resolution=" + resolution() + "&bitrate=" + bitrate() + "&profile=" + profile() + "&deint=" + deint() 
 
   playUrl = ->
     $('#video-player').data('play-url')
