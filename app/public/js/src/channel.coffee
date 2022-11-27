@@ -1,5 +1,7 @@
 $ ->
   timer = null
+  
+   ### It appears that this is where the API stuff is happening ###
 
   videoPlayer = ->
     $("#video-player")[0]
