@@ -41,7 +41,7 @@ RUN apk --no-cache add lame-dev libvorbis-dev zlib-dev x264-dev libtheora-dev \
   && make install \
   && make distclean \
   && hash -r \
-  && git clone --depth 1 https://github.com/maddox/wallop.git /wallop \
+  && git clone --depth 1 https://github.com/srgzx/wallop.git /wallop \
   && cd /wallop \
   && bundle install --standalone --binstubs --local --path vendor/gems --quiet \
   && apk del libvorbis-dev zlib-dev libtheora-dev libvpx-dev rtmpdump-dev \
