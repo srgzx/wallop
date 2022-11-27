@@ -1,6 +1,6 @@
 11/26/2022
 
-The original <a href="https://github.com/maddox/wallop">wallop</a> project has been sunset, and the creators have moved on to a new commercial endeavor called <a href="https://www.getchannels.com">Channels</a>.
+The original <a href="https://github.com/maddox/wallop">wallop</a> project has been sunseted, and the creators have moved on to a new commercial endeavor called <a href="https://www.getchannels.com">Channels</a>.
 
 I have taken it upon myself to re-upload the original code and create a new separate experimental repo, so I can update it, make it more useful for my own purposes, and to learn more about web development.
 
