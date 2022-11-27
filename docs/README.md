@@ -12,7 +12,7 @@ So far I have changed:
 
 1.) Added option for turning on or off ffmpeg deinterlace filter (-vf bwdif) 
 
-2.) Updated Dockerfile so that it actually builds / works (works on ARM systems!)
+2.) Updated <a href"https://github.com/srgzx/wallop/tree/main/Docker">Dockerfile</a> so that it actually builds / works (works on ARM systems!)
 
 3.) Added additional bitrate options
 
