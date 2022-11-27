@@ -10,15 +10,15 @@ I did not fork the original repo because I don't really know what I am doing her
 
 So far I have changed:
 
-1.) Added option for turning on or off ffmpeg deinterlace filter (-vf bwdif) 
+1.) Added option for turning on or off ffmpeg deinterlace filter (-vf bwdif) which is the main thing I wanted to accomplish with this project
 
 2.) Updated <a href="https://github.com/srgzx/wallop/tree/main/Docker">Dockerfile</a> so that it actually builds / works (works on ARM systems!)
 
-3.) Added additional bitrate options
+3.) Added additional bitrate options, not sure how useful this will be but we'll see
 
-To do at some point:
+To do at some point in the future:
 
-1.) Add username / password login
+1.) Add username / password login (this will be next)
 
 2.) Fix the way Wallop sessions work, because right now they kinda suck...if the streaming settings are changed, and the browser back button is used, you have to wait 60 seconds until it kills the previous session in order to load another stream...hopefully there's a better way to do this?
 
