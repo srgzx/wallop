@@ -23,7 +23,7 @@ To do at some point:
 2.) Fix the way Wallop sessions work
 
 3.) Add detector for when all tuners are tied up, Wallop currently will endless loop when this happens (not good lol)
-================================================================================================================================
+
 Continue on with the original readme:
 
 # Wallop API
