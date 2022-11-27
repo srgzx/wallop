@@ -10,6 +10,8 @@ To run build and run this Docker container:
 
 5.) docker build . -t wallop
 
+  This will take some time (~720 seconds) as ffmpeg is manually compiled from source to use AAC, there may be a workaround not sure
+
 6.) docker run --rm --name wallop -v /path/to/config.toml:/wallop/config/config.toml -p 8888:8888 wallop
 
   Make sure to change the above path, and make sure it's an absolute path ^ (Ex: /Volumes/MyDrive/config.toml:/wallop/config/config.toml)
