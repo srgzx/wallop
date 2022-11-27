@@ -1,16 +1,18 @@
 11/26/2022
 
-The original project (https://github.com/maddox/wallop) has been abandoned and the creators have moved on to Channels (www.getchannels.com), so I have taken it upon myself to re-upload the code, and update it to make it more useful for my own purposes and to learn more about web development
+The original wallop project (https://github.com/maddox/wallop) has been abandoned and the creators have moved on to Channels (www.getchannels.com), so I have taken it upon myself to re-upload the code and create a separate repo, and update it to make it more useful for my own purposes and to learn more about web development.
 
-To be clear I am a sysadmin not a dev, and I know next to nothing about Ruby -- but this is definitely a great way to learn!
+To be clear I am a sysadmin and not a dev, and I know next to nothing about Ruby -- but this is definitely a great way to learn.
+
+So far I have changed:
 
 1.) Added option for turning on or off ffmpeg deinterlace filter (-vf bwdif) 
 
 2.) Updated Dockerfile so that it actually builds / works (works on ARM systems!)
 
-3.) Added other bitrate options
+3.) Added additional bitrate options
 
-Works in progress:
+To do at some point:
 
 1.) Add username / password login
 
