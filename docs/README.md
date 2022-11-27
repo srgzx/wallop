@@ -1,8 +1,12 @@
 11/26/2022
 
-The original <a href="https://github.com/maddox/wallop">wallop project</a> has been abandoned and the creators have moved on to Channels (www.getchannels.com), so I have taken it upon myself to re-upload the code and create a separate repo, and update it to make it more useful for my own purposes and to learn more about web development.
+The original <a href="https://github.com/maddox/wallop">wallop project</a> has been abandoned and the creators have moved on to a new commercial endeavor called <a href="https://www.getchannels.com">Channels</a>.
 
-To be clear I am a sysadmin and not a dev, and I know next to nothing about Ruby -- but this is definitely a great way to learn.
+I have taken it upon myself to re-upload the code and create a separate experimental repo, so I can update it, make it more useful for my own purposes, and to learn more about web development.
+
+To be clear: I am a sysadmin and not a dev, and I know next to nothing about Ruby -- but this is definitely a great way to learn.
+
+I did not fork the original repo because I don't really know what I am doing here on Github, and I did not want to accidentally bombard the original project folks with notifications & commits etc.
 
 So far I have changed:
 
