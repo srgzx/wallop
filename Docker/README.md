@@ -12,4 +12,6 @@ To run build and run this Docker container:
 
 6.) docker run --rm --name wallop -v /path/to/config.toml:/wallop/config/config.toml -p 8888:8888 wallop
 
+  Make sure to change the above path, and make sure it's an absolute path ^ (Ex: /Volumes/MyDrive/config.toml:/wallop/config/config.toml)
+
 7.) Launch a browser http://localhost:8888 
