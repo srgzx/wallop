@@ -4,7 +4,7 @@
 FROM alpine:3.14
 
 MAINTAINER Jarod Watkins <jwatkins@jarodw.com>
-# Updated by nick@srgnet.org Nov '22
+# Updated by me Nov '22
 
 ENV PKG_CONFIG_PATH /ffmpeg_build/lib/pkgconfig
 RUN apk --no-cache add lame-dev libvorbis-dev zlib-dev x264-dev libtheora-dev \
