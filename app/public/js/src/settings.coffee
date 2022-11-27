@@ -1,6 +1,6 @@
 $ ->
 
-  # These lines directly below set the default values
+  ### These lines directly below set the default values ###
   
   bitrate = ->
     localStorage.bitrate || "3000k"
