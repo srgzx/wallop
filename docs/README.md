@@ -2,7 +2,7 @@
 
 The original <a href="https://github.com/maddox/wallop">wallop</a> project has been sunset, and the creators have moved on to a new commercial endeavor called <a href="https://www.getchannels.com">Channels</a>.
 
-I have taken it upon myself to re-upload the code and create a new separate experimental repo, so I can update it, make it more useful for my own purposes, and to learn more about web development.
+I have taken it upon myself to re-upload the original code and create a new separate experimental repo, so I can update it, make it more useful for my own purposes, and to learn more about web development.
 
 To be clear: I am a sysadmin and not a dev, and I know next to nothing about Ruby, but this is definitely a great way to learn.
 
