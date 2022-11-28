@@ -81,7 +81,7 @@ module Wallop
           
           ## this uses a different command based on the deinterlace setting, there's probably a much more efficient way to write this code in Ruby
 
-          if params[:deint]  == '0'
+          if deint  == '0'
               Wallop.logger.info "Tuning channel #{channel} with quality settings of #{resolution} @ #{bitrate} with deinterlace filter off"
               pid  = POSIX::Spawn::spawn(Wallop.ffmpeg_no_deint_command(channel, resolution, bitrate))
           else
